@@ -141,7 +141,7 @@ async function commander() {
 
   try {
     const response = await axios.post(
-      `http://localhost:3000/api/commande`,
+      `https://mcbo.onrender.com/api/commande`,
       { panier: panier.value },
       {
         headers: {
