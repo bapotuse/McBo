@@ -53,7 +53,7 @@ async function fetchCommande() {
 
     const utilisateur = JSON.parse(utilisateurStr);
 
-    const response = await fetch(`http://localhost:3000/api/commande/${idCommande}`, {
+    const response = await fetch(`https://mcbo.onrender.com/api/commande/${idCommande}`, {
       headers: {
         'Content-Type': 'application/json',
         'user-id': utilisateur.id
