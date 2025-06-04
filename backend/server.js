@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://mcbo.vercel.app',
   credentials: true,
   allowedHeaders: ['Content-Type', 'user-id']
 }))
