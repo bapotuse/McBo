@@ -46,7 +46,7 @@ const burgers = ref([])
 
 const getBurgers = async () => {
   try {
-    const res = await axios.get(`http://localhost:3000/api/burgers`)
+    const res = await axios.get(`https://mcbo.onrender.com/api/burgers`)
     burgers.value = res.data
   } catch (err) {
     console.error('Erreur lors de la récupération des burgers :', err)
