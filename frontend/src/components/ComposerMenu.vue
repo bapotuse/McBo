@@ -85,11 +85,11 @@ async function choisirTaille(taille) {
   const { boisson: idTypeBoisson, frite: idTypeFrite } = TAILLE_TYPE_MAP[taille]
 
   try {
-    const resBoissons = await axios.get(`http://localhost:3000/api/articles-par-type/${idTypeBoisson}`)
+    const resBoissons = await axios.get(`https://mcbo.onrender.com/api/articles-par-type/${idTypeBoisson}`)
     boissons.value = resBoissons.data
     selectedBoisson.value = boissons.value[0]?.id
 
-    const resFrites = await axios.get(`http://localhost:3000/api/articles-par-type/${idTypeFrite}`)
+    const resFrites = await axios.get(`https://mcbo.onrender.com/api/articles-par-type/${idTypeFrite}`)
     frites.value = resFrites.data
     selectedFrite.value = frites.value[0]?.id
   } catch (err) {
@@ -102,7 +102,6 @@ async function addToCart() {
   const panierSauvegarde = localStorage.getItem('panier')
   if (panierSauvegarde) panier = JSON.parse(panierSauvegarde)
 
-  // Vérifier la sélection
   const boissonChoisie = boissons.value.find(b => b.id === selectedBoisson.value)
   const friteChoisie = frites.value.find(f => f.id === selectedFrite.value)
 
