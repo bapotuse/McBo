@@ -111,7 +111,7 @@ async function addToCart() {
   }
 
   try {
-    const res = await axios.get(`http://localhost:3000/api/article/${burgerId.value}`)
+    const res = await axios.get(`https://mcbo.onrender.com/api/article/${burgerId.value}`)
     const burgerChoisi = res.data
 
     const menu = {
