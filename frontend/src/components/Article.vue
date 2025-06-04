@@ -90,10 +90,10 @@ const articlesFiltres = computed(() => {
 
 onMounted(async () => {
   try {
-    const resArticles = await axios.get(`http://localhost:3000/api/articles`)
+    const resArticles = await axios.get(`https://mcbo.onrender.com/api/articles`)
     articles.value = resArticles.data
 
-    const resTypes = await axios.get(`http://localhost:3000/api/type-articles`)
+    const resTypes = await axios.get(`https://mcbo.onrender.com/api/type-articles`)
     types.value = resTypes.data
   } catch (error) {
     console.error('Erreur lors du chargement des données :', error)
