@@ -83,7 +83,7 @@ async function fetchCommandes() {
       throw new Error('Utilisateur non authentifié')
     }
 
-    const response = await fetch(`http://localhost:3000/api/commandes`, {
+    const response = await fetch(`https://mcbo.onrender.com/api/commandes`, {
       headers: {
         'Content-Type': 'application/json',
         'user-id': utilisateur.id
