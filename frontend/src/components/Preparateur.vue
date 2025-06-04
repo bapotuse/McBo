@@ -106,7 +106,7 @@ onMounted(async () => {
   if (authorized.value) {
     loading.value = true
     try {
-      const res = await axios.get(`http://localhost:3000/api/commandes/toutes`)
+      const res = await axios.get(`https://mcbo.onrender.com/api/commandes/toutes`)
       commandes.value = res.data
     } catch (err) {
       console.error('Erreur lors du chargement des commandes :', err)
@@ -119,7 +119,7 @@ onMounted(async () => {
 
 const mettreAJourStatut = async (commande) => {
   try {
-    await axios.put(`http://localhost:3000/api/commandes/${commande.idCommande}/statut`, {
+    await axios.put(`https://mcbo.onrender.com/api/commandes/${commande.idCommande}/statut`, {
       statut: commande.statut
     })
     console.log(`✅ Statut de la commande ${commande.idCommande} mis à jour : ${commande.statut}`)
