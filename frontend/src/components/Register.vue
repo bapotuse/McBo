@@ -15,7 +15,7 @@ const erreur = ref('')
 
 const inscrire = async () => {
   try {
-    const response = await axios.post(`http://localhost:3000/api/auth/register`, {
+    const response = await axios.post(`https://mcbo.onrender.com/api/auth/register`, {
       nom: nom.value,
       prenom: prenom.value,
       adresse: adresse.value,
