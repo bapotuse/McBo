@@ -45,7 +45,7 @@ const erreur = ref('')
 
 const connexion = async () => {
   try {
-    const reponse = await fetch(`http://localhost:3000/api/auth/login`, {
+    const reponse = await fetch(`https://mcbo.onrender.com/api/auth/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
